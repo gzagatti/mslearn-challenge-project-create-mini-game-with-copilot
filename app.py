@@ -74,6 +74,16 @@ def main():
     # print the final score
     print("Your score is", score)
 
+    # determine the winner
+    if user_input == computer_input:
+        print(f"Draw! Both you and the computer chose {user_input}.")
+    elif (user_input == "rock" and computer_input == "scissors") or \
+         (user_input == "scissors" and computer_input == "paper") or \
+         (user_input == "paper" and computer_input == "rock"):
+        print(f"You win! {user_input} beats {computer_input}.")
+    else:
+        print(f"You lose! {computer_input} beats {user_input}.")
+
     # exit the program with goodbye message
     print("Goodbye!")
     exit()
